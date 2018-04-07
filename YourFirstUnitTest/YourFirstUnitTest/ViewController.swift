@@ -37,19 +37,10 @@ class ViewController: UIViewController {
         // vowels array containing all the vowels in the English alphabet.
         let vowels: [Character] = ["a", "A", "e", "E", "i", "I", "o", "O", "u", "U"]
         
-        // number of vowels the will be found in a string.
-        var numberOfVowelsInString = 0
-        
-        // loop over a string character and check if it is vowel or not.
-        for character in string {
-            if vowels.contains(character) {
-                // if a character is vowel, increase the numberOfVowelsInString count by 1.
-                numberOfVowelsInString += 1
-            }
+        // use reduce funtion rather then using for loop
+        return string.reduce(0) {
+            $0 + (vowels.contains($1) ? 1 : 0)
         }
-        
-        // return the numberOfVowelsInString
-        return numberOfVowelsInString
         
     }
 
