@@ -25,19 +25,21 @@ class TDDinXCodeTests: XCTestCase {
     }
     
     func test_MakeHeadLine_ReturnsStringWithEachWordStartCapital() {
-        let string = "this is A test head line"
+        let input = "this is A test head line"
+        let expected = "This Is A Test Head Line"
         
-        let headline = viewController.makeHeadline(from: string)
+        let headline = viewController.makeHeadline(from: input)
         
-        XCTAssertEqual(headline, "This Is A Test Head Line")
+        XCTAssertEqual(headline, expected)
     }
     
     func test_MakeHeadLine_ReturnsStringWithEachWordStartCapital2() {
-        let string = "here is another example"
+        let input = "here is another example"
+        let expected = "Here Is Another Example"
         
-        let headline = viewController.makeHeadline(from: string)
+        let headline = viewController.makeHeadline(from: input)
         
-        XCTAssertEqual(headline, "Here Is Another Example")
+        XCTAssertEqual(headline, expected)
     }
     
 }
